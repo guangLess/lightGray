@@ -1,12 +1,12 @@
-import React from 'react'
+// import React from 'react'
 
-const hello = () => {
-    return (
-    <div>
-    hello 🤩
-    </div>,
-    document.getElementById('main')
-    )
-}
+// const hello = () => {
+//     return (
+//     <div>
+//     hello 🤩
+//     </div>,
+//     document.getElementById('main')
+//     )
+// }
 
-hello()
+// hello()

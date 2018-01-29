@@ -1,7 +1,7 @@
 const path = require('path')
 
 const config = {
-    entry: './src/js/app.js',
+    entry: './src/js/Root.js',
     output: {
         path: path.resolve(__dirname, 'dist'),
         filename: 'bundle.js'
