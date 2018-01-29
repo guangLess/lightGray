@@ -6,6 +6,9 @@ const config = {
         path: path.resolve(__dirname, 'dist'),
         filename: 'bundle.js'
     },
+    devServer: {
+        contentBase: path.resolve(__dirname, 'src')
+    },
     module: {
         rules: [
             {
