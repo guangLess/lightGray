@@ -1,8 +1,8 @@
 import React from 'react'
 
 const Word = ({onClick, completed, text}) => (
-  <div>
-  <li 
+  <div className="word">
+  <p 
     onClick={onClick} 
     className={
       completed
@@ -11,18 +11,18 @@ const Word = ({onClick, completed, text}) => (
     }
   >
   {text}
-  </li>
+  </p>
   <p> this? </p>
   </div>
 )
 
 const Words = ({ words, onWordClick }) => {
     return (
-      <span className="word-collection">
+      <div className="word-collection">
         {words.map(word => (
           <Word key={word.id} {...word} onClick={() => onWordClick(word.id)} />
         ))}
-      </span>
+      </div>
     );
 }
 

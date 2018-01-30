@@ -28,13 +28,18 @@ body {
 .word-collection {
   list-style: none;
   width: 100vw;
+  height: 80%;
   order: -1;
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
+}
+.word{
+  flex: 1 1 25%;
 }
 [class^="word-collection__item"] {
   cursor: pointer;
-  height: 80px;
+  max-width: 200px;
   display: block;
   padding: 10px;
   margin-bottom: 20px;
@@ -81,3 +86,14 @@ body {
 .text-input__button {
   outline: none;
 }
+/* 
+@media only screen and (min-width: 730px) {
+  .container{
+    max-width: 720px;
+    justify-content: flex-end;
+  }
+.words-app {
+  order: -1;
+  flex-direction: row-reverse;
+  }
+}  */
