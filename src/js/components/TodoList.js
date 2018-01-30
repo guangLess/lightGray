@@ -1,6 +1,7 @@
 import React from 'react'
 
 const Todo = ({onClick, completed, text}) => (
+  <div>
   <li 
     onClick={onClick} 
     className={
@@ -11,6 +12,8 @@ const Todo = ({onClick, completed, text}) => (
   >
   {text}
   </li>
+  <p> this? </p>
+  </div>
 )
 
 const TodoList = ({ todos, onTodoClick }) => (
