@@ -1,9 +1,7 @@
 import { combineReducers } from 'redux'
 
 let nextWordId = 0
-
 const WRITE = 'WRITE'
-const SET_VISIBLITY = 'SET_VISIBLITY'
 const   WORD_SWITCH = '  WORD_SWITCH'
 
 export const write = text => ({
