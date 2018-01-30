@@ -1,5 +1,3 @@
-/* eslint-disable */
-
 import { combineReducers } from 'redux'
 
 let nextWordId = 0
@@ -13,11 +11,6 @@ export const write = text => ({
     id: nextWordId++,
     text
 })
-
-// export const setVisibilityFilter = filter => ({
-//     type: SET_VISIBLITY,
-//     filter
-// })
 
 export const wordSwitch = id => ({
     type:   WORD_SWITCH,
@@ -41,17 +34,3 @@ export const wordReducer = (state = [], action) => {
           return state
     }
 }
-
-// const visibilityFilter = (state = 'SHOW_ALL', action) => {
-//     switch (action.type) {
-//         case SET_VISIBLITY:
-//             return action.filter
-//         default:
-//             return state
-//     }
-// }
-
-// export const todoApp = combineReducers({
-//     wordReducer,
-//     //visibilityFilter
-// })

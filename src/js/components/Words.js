@@ -6,8 +6,8 @@ const Word = ({onClick, completed, text}) => (
     onClick={onClick} 
     className={
       completed
-    ? "todo-list__item--completed"
-    : "todo-list__item--active"
+    ? "word-collection__item--completed"
+    : "word-collection__item--active"
     }
   >
   {text}
@@ -18,11 +18,11 @@ const Word = ({onClick, completed, text}) => (
 
 const Words = ({ words, onWordClick }) => {
     return (
-      <ul className="todo-list">
+      <span className="word-collection">
         {words.map(word => (
           <Word key={word.id} {...word} onClick={() => onWordClick(word.id)} />
         ))}
-      </ul>
+      </span>
     );
 }
 

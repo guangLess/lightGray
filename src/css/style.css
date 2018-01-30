@@ -1,7 +1,6 @@
 :root{
     font: 500 26px Helvetica, Arial, sans-serif;
   }
-
 body {
   background: #a3f9fff5;
   margin: 0; 
@@ -16,7 +15,7 @@ body {
   align-items: center;
   justify-content: flex-end;
 }
-.todo-app {
+.words-app {
   background: #a3e2fff5;
   width: 100%;
   border-radius: 6px 6px 0 0;
@@ -26,14 +25,14 @@ body {
   flex-direction:  column;
   align-items: center;
 }
-.todo-list {
+.word-collection {
   list-style: none;
   width: 100vw;
   order: -1;
   display: flex;
   flex-direction: row;
 }
-[class^="todo-list__item"] {
+[class^="word-collection__item"] {
   cursor: pointer;
   height: 80px;
   display: block;
@@ -45,29 +44,16 @@ body {
   box-sizing: border-box;
   border-bottom:1px solid white;
 }
-.todo-list__item--completed {
+.word-collection__item--completed {
   color: red;
 }
-
-.add-todo{
+.text{
   width: calc(100% - 20px);
   position: relative;
   height: 80px;
   padding: 0, auto;
 }
-.add-todo__button {
-  position: absolute;
-  display: block;
-  width: 60px;
-  height: 100%;
-  background: transparent;
-  border:1px solid white;
-  font-size: 20px;
-}
-.add-todo__button {
-  outline: none;
-}
-.add_todo__input {
+.text-input {
   border: 0;
   height: 100%;
   width: 60%;
@@ -76,11 +62,22 @@ body {
   font-weight: 500;
   text-align: center;
 }
-
-.add_todo__input::placeholder {
+.text-input::placeholder {
   color:  #a3f9fff5;
   font-size: 1rem;
 }
-.add_todo__input {
+.text-input {
+  outline: none;
+}
+.text-input__button {
+  position: absolute;
+  display: block;
+  width: 60px;
+  height: 100%;
+  background: transparent;
+  border:1px solid white;
+  font-size: 20px;
+}
+.text-input__button {
   outline: none;
 }

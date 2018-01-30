@@ -5,7 +5,7 @@ import { write } from '../redux'
 let AddTextComp = ({ dispatch }) => {
   let input
   return (
-    <div className="add-todo">
+    <div className="text">
       <form
         onSubmit={e => {
           e.preventDefault()
@@ -20,10 +20,10 @@ let AddTextComp = ({ dispatch }) => {
           ref={node => {
             input = node
           }}
-          className="add_todo__input"
+          className="text-input"
           placeholder="writing..."
         />
-        <button type="submit" className="add-todo__button">
+        <button type="submit" className="text-input__button">
           🌊
         </button>
       </form>
