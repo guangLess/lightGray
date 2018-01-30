@@ -7,7 +7,7 @@ import { addTodo } from '../redux'
 let AddTodoComponent = ({ dispatch }) => {
   let input
   return (
-    <div>
+    <div className="add-todo">
       <form
         onSubmit={e => {
           e.preventDefault()
@@ -22,9 +22,11 @@ let AddTodoComponent = ({ dispatch }) => {
           ref={node => {
             input = node
           }}
+          className="add_todo__input"
+          placeholder="write something?"
         />
-        <button type="submit">
-          Add Todo
+        <button type="submit" className="add-todo__button">
+          🌊
         </button>
       </form>
     </div>
