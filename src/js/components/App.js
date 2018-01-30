@@ -1,23 +1,13 @@
 import React from 'react'
-import Footer from './Footer'
-import AddTodo from '../containers/AddTodo'
-import VisibleTodoList from '../containers/VisibleTodoList'
+import TextInput from '../containers/TextInput'
+import WordsCollection from '../containers/WordsCollection'
 
 const App = () => (
   <div className="todo-app">
-   <AddTodo />
+   <TextInput />
     <div> Hello ! </div>
-    <VisibleTodoList />
+    <WordsCollection />
   </div>
 )
 
-// const App = () => (
-//   <div>
-//     <p> hello </p> 
-//   </div>
-// )
-
-
 export default App
-
-   //

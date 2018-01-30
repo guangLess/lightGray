@@ -1,10 +1,8 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import { addTodo } from '../redux'
+import { write } from '../redux'
 
-//console.log(addTodo)
-
-let AddTodoComponent = ({ dispatch }) => {
+let AddTextComp = ({ dispatch }) => {
   let input
   return (
     <div className="add-todo">
@@ -14,7 +12,7 @@ let AddTodoComponent = ({ dispatch }) => {
           if (!input.value.trim()) {
             return
           }
-          dispatch(addTodo(input.value))
+          dispatch(write(input.value))
           input.value = ''
         }}
       >
@@ -23,7 +21,7 @@ let AddTodoComponent = ({ dispatch }) => {
             input = node
           }}
           className="add_todo__input"
-          placeholder="write something?"
+          placeholder="writing..."
         />
         <button type="submit" className="add-todo__button">
           🌊
@@ -33,6 +31,5 @@ let AddTodoComponent = ({ dispatch }) => {
   )
 }
 
-let AddTodo = connect()(AddTodoComponent)
-
-export default AddTodo
+let TextInput = connect()(AddTextComp)
+export default TextInput

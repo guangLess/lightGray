@@ -2,10 +2,10 @@ import React, {Component} from 'react'
 import { render } from 'react-dom'
 import { Provider } from 'react-redux'
 import { createStore } from 'redux'
-import { todoApp } from './redux'
+import { wordReducer } from './redux'
 import App from './components/App'
 
-let store = createStore(todoApp)
+let store = createStore(wordReducer)
 
 const Hello = () => {
     return (
@@ -15,12 +15,4 @@ const Hello = () => {
     )
 }
 
-
-// const Hello = () => (
-//     <div>
-//       <p> hello </p> 
-//     </div>
-//   )
-
-render(<Hello />, document.getElementById('root'));
-//hello 🤩
+render(<Hello />, document.getElementById('root'))

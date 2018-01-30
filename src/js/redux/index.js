@@ -2,56 +2,56 @@
 
 import { combineReducers } from 'redux'
 
-let nextTodoId = 0
+let nextWordId = 0
 
-const ADD_TODO = 'ADD_TODO'
+const WRITE = 'WRITE'
 const SET_VISIBLITY = 'SET_VISIBLITY'
-const TOGGLE_TODO = 'TOGGLE_TODO'
+const   WORD_SWITCH = '  WORD_SWITCH'
 
-export const addTodo = text => ({
-    type: ADD_TODO,
-    id: nextTodoId++,
+export const write = text => ({
+    type: WRITE,
+    id: nextWordId++,
     text
 })
 
-export const setVisibilityFilter = filter => ({
-    type: SET_VISIBLITY,
-    filter
-})
+// export const setVisibilityFilter = filter => ({
+//     type: SET_VISIBLITY,
+//     filter
+// })
 
-export const toggleTodo = id => ({
-    type: TOGGLE_TODO,
+export const wordSwitch = id => ({
+    type:   WORD_SWITCH,
     id
 })
 
 // * reducers
-const todos = (state = [], action) => {
+export const wordReducer = (state = [], action) => {
     switch(action.type) {
-       case ADD_TODO:
+       case WRITE:
          return [...state, 
                 {id: action.id, text: action.text, completed: false}
                 ]
-        case TOGGLE_TODO:
-          return state.map( todo => 
-            ( todo.id === action.id)
-            ? {...todo, completed: !todo.completed}
-            : todo
+        case    WORD_SWITCH:
+          return state.map( word => 
+            ( word.id === action.id)
+            ? {...word, completed: !word.completed}
+            : word
         )
         default:
           return state
     }
 }
 
-const visibilityFilter = (state = 'SHOW_ALL', action) => {
-    switch (action.type) {
-        case SET_VISIBLITY:
-            return action.filter
-        default:
-            return state
-    }
-}
+// const visibilityFilter = (state = 'SHOW_ALL', action) => {
+//     switch (action.type) {
+//         case SET_VISIBLITY:
+//             return action.filter
+//         default:
+//             return state
+//     }
+// }
 
-export const todoApp = combineReducers({
-    todos,
-    visibilityFilter
-})
+// export const todoApp = combineReducers({
+//     wordReducer,
+//     //visibilityFilter
+// })
